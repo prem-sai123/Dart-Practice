@@ -1,0 +1,112 @@
+void main() {
+  const url = 'https://applyconsumer.ezfinanz.com/?loanid=261F90815C81432C90C3A5ECCA862401&mode=staging';
+  final parsedurl = Uri.parse(url);
+  print(parsedurl.host);
+  print(parsedurl.queryParameters.containsKey('mode'));
+
+  const tbgcURL = "https://testtgbc.easycloud.co.in/tgbc";
+  String extractedData = '''
+4252112&9100051
+      Srinivasa
+      Farms
+      IRNNumber
+      E-WayBillNo:
+      BilledTo:
+      GFMRetailPvtLtd(TenderCuts)
+      GFMRetailPvtLtd(TenderCuts)
+      Kondapur
+      BotanicalGardenRoad,OppAparnaHights,
+      Hyderabad-500032
+      TelanganaState
+      India
+      CustomerGSTIN
+      CustomerPAN
+      ShippedTo:
+      Kondapur
+      BotanicalGardenRoad,OppAparnaHights,
+      Hyderabad-500032
+      TelanganaState
+      india
+      NG
+      10
+      Plot#82,KavuriHills,Phase-I1,Madhapur,Hyderabad,TelanganaState-500081
+      PlantAddress:Sy.No.403/P,ThunikiVillage,KowdipallyMandal,MedakDist,TelanganaState-502316
+      CIN:U01222TG1983PTCO03979PANNo:AAFCS3289P
+      40
+      HSNCode
+      0207
+      Bankaccountdetails:
+      BankName:YesBankLtd
+      A/cNo:000681300003960
+      36AAGCG1284K1ZE
+      AAGCG1284K
+      Termsandconditions:
+      SRINIVASAFARMSPRIVATELIMITED
+      Description
+      Branch&IFSCCode:Somajiguda,Hyderabad&YESBO000006
+      WBwithskin
+      Liver
+      a)Goodsoncesoldwillnotbetakenback.
+      GSTIN:36AAFCS3289P1ZK
+      FSSAILicenseNo:10017047000823
+      Quantity
+      (Kas)
+      15.00
+      6.00
+      c)Interest@24%willbechargedifbillsarenotpaidwithinduedate.
+      BillofSupply
+      Noof
+      Packets/Pcs
+      4252112&GFMRetailPvt
+      Page1of2
+      Inv.No./Date
+      InvoiceTime
+      :2.49.31AM
+      DeliveryNoteNo8044791
+      OrderNo/Date
+      CustomerCode
+      ReferenceNo.
+      StateCode
+      InvoiceAmountRs.19305.00
+      Frieght
+      GrossWeight
+      NetWeight
+      Weight-Volume
+      VehicleNo
+      ReferencePO:
+      Pricein
+      Rs
+      b)Anydamagesaretobenotifiedatthetimeofdeliveryonly,thereafternoclaimwillbeentertained.
+      TaxRate
+      185.00|NoTax
+      90.00|NoTax
+      SubTotal
+      TotalQty
+      4252112
+      :11094360
+      :9100051
+      :0
+      :36
+      TaxAmountin
+      Rs
+      92.000kg
+      92.000kg
+      0.00
+      19/05/2022
+      0.00
+      19/05/2022
+      18/05/2022
+      d)I/Weherebycertifythatfood/foodsmentionedinthisInvoiceis/arewarrantedtobeofthenatureandqualitywhichit/thesepurportto
+      be
+      Amountin
+      Rs.
+      2,775.00
+      AuthorisedSignatory.
+      540.00
+      3,315.00
+      21.00
+      FORSRINIVASAFARMSPRIVATELIMITED
+      4252112&9100051
+''';
+print(extractedData.split('\n').where((element) => element.trim() == '4252112&9100051').length);
+}
